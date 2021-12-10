@@ -9,6 +9,12 @@
     <title>Choice coin voting</title>
 
     <style>
+
+        body {
+            background-color: black;
+        }
+
+  
         .float-end{
             padding-left: 58rem;
         }
@@ -20,15 +26,17 @@
             font-family:'Times New Roman', Times, serif;
             text-align: center;
             padding-top: 100px;
+            color: white;
         }
         .vote {
             text-align: center;
             box-sizing: content-box;
             border-radius: 10px;
-            background-color: rgb(22, 58, 102);
+            background-color: rgb(18, 67, 122);
             max-width: 500px;
             margin: 0 auto 1.25rem auto;
             color: white;
+            box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
         }
         .choice {
             padding-top: 20px;
@@ -43,6 +51,25 @@
         .col-12 {
             align-items: center;
             padding-left: 650px;
+        }
+
+        .form-control {
+            text-align: center;
+            box-sizing: content-box;
+            border-radius: 10px;
+            background-color: rgb(22, 58, 102);
+            max-width: 400px;
+            margin: 0 auto 1.25rem auto;
+            color: white;
+            
+
+        }
+        #choice-am {
+            background-color: white;
+            max-width: fit-content;
+        }
+        #choice-amount {
+            padding-left: 140px;
         }
 
     </style>
@@ -76,6 +103,11 @@
             <input type="radio" name="recommend" class="input-radio" value="No">No
         </label>
     </div>
+    <form class="form-control">
+        <label id="choice-amount" for="choice"><b>Choice Amount</b></label>
+        <input type="number" name="choice" placeholder="Enter Choice Amount" 
+                class="form-control" id="choice-am" required>
+    </form>
     <div class="col-12">
         <button type="submit" class="btn btn-success">Submit</button>
     </div>
