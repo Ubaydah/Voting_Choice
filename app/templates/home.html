@@ -5,86 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
     <!--Bootsrap CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/static/css/main.css">
     <title>Choice coin voting</title>
 
-    <style>
-
-        body {
-            background-color: black;
-        }
-
-  
-        .float-end{
-            padding-left: 58rem;
-        }
-
-        a {
-            padding-left: 100px;
-        }
-        .welcome {
-            font-family:'Times New Roman', Times, serif;
-            text-align: center;
-            padding-top: 100px;
-            color: white;
-        }
-        .vote {
-            text-align: center;
-            box-sizing: content-box;
-            border-radius: 10px;
-            background-color: rgb(18, 67, 122);
-            max-width: 500px;
-            margin: 0 auto 1.25rem auto;
-            color: white;
-            box-shadow: 5px 5px 10px 2px rgba(36, 32, 32, 0.8);
-        }
-        .choice {
-            padding-top: 20px;
-        }
-
-        label{
-            padding-bottom: 20px;
-            display: flex;
-            padding-left: 68px;
-            align-items: center;
-        }
-        .col-12 {
-            align-items: center;
-            padding-left: 41rem;
-        }
-
-        .amount {
-            text-align: center;
-            box-sizing: content-box;
-            border-radius: 10px;
-            background-color: rgb(22, 58, 102);
-            max-width: 400px;
-            margin: 0 auto 1.25rem auto;
-            color: white;
-            
-
-        }
-        #choice-am {
-            background-color: white;
-            max-width: fit-content;
-        }
-        #choice-amount {
-            padding-left: 140px;
-        
-        }
-        .wallet {
-            text-align: center;
-            box-sizing: content-box;
-            border-radius: 5px;
-            color: white;
-            
-
-        }
-      
-        .w-address {
-            margin: 10px 0 10px 0;
-        }
-    </style>
 
 </head>
 <body>
@@ -96,7 +19,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <li class="float-end">
-                <button class="btn btn-outline-primary" type="button">Connect to Wallet</button>
+                <button class="btn btn-outline-primary" onclick="Connect()" type="button">Connect to Wallet</button>
             </li>
 
           </div>
@@ -114,10 +37,10 @@
     <div class="vote">
         <p class="choice">Will you always consider Choice Coin your Choice?</p>
         <label>
-            <input type="radio" name="recommend"class="input-radio" value="Yes">Yes
+            <input type="radio" name="zero_address"class="input-radio" value="Yes">Yes
         </label>
         <label>
-            <input type="radio" name="recommend" class="input-radio" value="No">No
+            <input type="radio" name="one_address" class="input-radio" value="No">No
         </label>
     </div>
     <div class="amount">
@@ -126,7 +49,7 @@
                 class="amount" id="choice-am" required>
     </div>
     <div class="col-12">
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" onclick="SubmitAlgo()" class="btn btn-success">Submit</button>
     </div>
     </form>
 
@@ -140,6 +63,8 @@
     
     
     
+    <script src="../static/js/algowallet.js"></script>
+    <script src="../static/js/algo.js"></script>
     
     <!--Boostrap Javascript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
