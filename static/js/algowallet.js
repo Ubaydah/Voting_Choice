@@ -38,7 +38,8 @@ const algoWalletSign = async () => {
     try {
       let response = await algoWalletSend(value, wallet, Amount);
       if (response) {
-        window.location.href = "/";
+        document.getElementById("notify").innerHTML= `You have successfully casted a vote`
+        //window.location.href = "/";
       }
     } catch (error) {
       console.error(error);
@@ -53,7 +54,8 @@ const algoWalletSign = async () => {
     try {
       let response = await algoWalletSend(value, wallet, Amount);
       if (response) {
-        window.location.href = "/";
+        document.getElementById("notify").innerHTML= `You have successfully casted a vote`
+        //window.location.href = "/";
       }
     } catch (error) {
       console.error(error);
@@ -103,4 +105,3 @@ const algoWalletSend = async (input, from, amount) => {
     }
   }
 };
-
