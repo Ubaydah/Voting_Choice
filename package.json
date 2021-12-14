@@ -1,24 +1,21 @@
 {
-  "name": "ubaydah_grant",
+  "name": "algowallet",
   "version": "1.0.0",
-  "description": "choice_coin voting",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ubaydah/Voting_Choice.git"
-  },
-  "author": "ubaydah",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ubaydah/Voting_Choice/issues"
-  },
-  "homepage": "https://github.com/Ubaydah/Voting_Choice#readme",
   "dependencies": {
     "algosdk": "^1.12.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
