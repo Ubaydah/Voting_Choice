@@ -12,7 +12,7 @@ const address_1 = "XNJURQAFPSPQ6DVR2CQB3KAZYCKLTAGFKK7BDN53QB6BY2R3IHA5VCYH2Q";
 const address_2 = "M35RQKHXOU37TDOQLBRNH525LCE4NPZWW5A7DPVGRAT4QCDQVP2BJQKCBQ";
 
 const zeroInput = document.getElementById("zero_address"); // get the zero address checkbox
-const oneInput = document.getElementById("one_address"); //get the one checkbox
+const oneInput = document.getElementById("one_address"); //get the one address checkbox
 
 const myAlgoConnect = new MyAlgoConnect();
 
@@ -28,12 +28,13 @@ const Connect = async () => {
   }
 };
 
+//sign the transaction
 const algoWalletSign = async () => {
-  //Check if blue address checked
+  //Check if zero address checked
   if (zero_address.checked) {
-    const wallet = document.getElementById("wallet").value; //get blue wallet address
+    const wallet = document.getElementById("wallet").value; //get zero wallet address
     let value = zero_address.value;
-    let Amount = Number(document.getElementById("choice-am").value); // blue choice amount
+    let Amount = Number(document.getElementById("choice-am").value); // choice amount
     try {
       let response = await algoWalletSend(value, wallet, Amount);
       if (response) {
@@ -44,11 +45,11 @@ const algoWalletSign = async () => {
     }
   }
 
-  // Check if red address checked
+  // Check if one address checked
   if (one_address.checked) {
-    const wallet = document.getElementById("wallet").value; //get red wallet address
+    const wallet = document.getElementById("wallet").value; //get one wallet address
     let value = one_address.value;
-    let Amount = Number(document.getElementById("choice-am").value); //red choice amount
+    let Amount = Number(document.getElementById("choice-am").value); //choice amount
     try {
       let response = await algoWalletSend(value, wallet, Amount);
       if (response) {
@@ -60,6 +61,7 @@ const algoWalletSign = async () => {
   }
 };
 
+// send choice
 const algoWalletSend = async (input, from, amount) => {
   let params = await algoClient.getTransactionParams().do();
   let encoder = new TextEncoder();
