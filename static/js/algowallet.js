@@ -1,6 +1,6 @@
 const host = "https://testnet-algorand.api.purestake.io/ps2";
 const Token = {
-  "X-API-Key": "EaUlAQzl9Z831PDt5GTxV7fMjYk9CsSK2VmERE4T",
+  "X-API-Key": "",
 };
 
 const Port = "";
@@ -8,8 +8,8 @@ const algoClient = new algosdk.Algodv2(Token, host, Port);
 
 const CHOICE_ID = 21364625;
 
-const address_1 = "XNJURQAFPSPQ6DVR2CQB3KAZYCKLTAGFKK7BDN53QB6BY2R3IHA5VCYH2Q";
-const address_2 = "M35RQKHXOU37TDOQLBRNH525LCE4NPZWW5A7DPVGRAT4QCDQVP2BJQKCBQ";
+const address_1 = ""; //Zero_address
+const address_2 = ""; //one_address
 
 const zeroInput = document.getElementById("zero_address"); // get the zero address checkbox
 const oneInput = document.getElementById("one_address"); //get the one address checkbox
